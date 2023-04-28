@@ -8,6 +8,7 @@ public class CubeColorChange : MonoBehaviour
     private Color startColor;
     private Renderer renderer;
     private float lastHoverTime;
+    public float time = 5f;
 
     void Start()
     {
@@ -28,7 +29,7 @@ public class CubeColorChange : MonoBehaviour
 
     void Update()
     {
-        if (Time.time - lastHoverTime > 5f)
+        if (Time.time - lastHoverTime > time)
         {
             renderer.material.color = Color.red;
         }
